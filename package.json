@@ -1,0 +1,24 @@
+{
+  "name": "bamazonDB",
+  "version": "1.0.0",
+  "description": "Very, very initial rough draft for an Amazon like app for UMN coding bootcamp. The mysql database needs to be updated to function properly with the code so that the application can run on the command line.",
+  "main": "bamazon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brothernk/bamazonDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brothernk/bamazonDB/issues"
+  },
+  "homepage": "https://github.com/brothernk/bamazonDB#readme",
+  "dependencies": {
+    "inquirer": "^5.1.0",
+    "mysql": "^2.15.0"
+  }
+}

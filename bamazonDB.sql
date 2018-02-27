@@ -1,31 +1,18 @@
-DROP DATABASE IF EXISTS bamazonDB;
-CREATE database bamazonDB;
+drop database if exists bamazonDB;
 
-USE bamazonDB;
+create database bamazonDB;
 
-CREATE TABLE bamazonProducts (
-  position INT NOT NULL,
-  product VARCHAR(100) NULL,
-  id_number VARCHAR(100) NULL,
-  PRIMARY KEY (position)
+use bamazonDB;
+
+create table products (
+	item_id integer auto_increment not null,
+    product_name varchar(100) not null,
+    department_name varchar(100),
+    price decimal(10,2), 
+    stock_quantity integer not null,
+    primary key (item_id)
 );
 
-SELECT * FROM bamazonDB;
+insert into products (product_name, department_name, price, stock_quantity)
+values ('Mac Lipstick', 'Makeup',18.00, 21), ('Moleskin Journal', 'Office', 20.00,  3), ('Starbucks Mug', 'Home', 6.00, 89), ('Urban Decay Eyeliner', 'Makeup', 15.00, 14), ('Stuffed Animal Dolphint', 'Kids', 30.00, 323);
 
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE `products` (
-  `item_id` int(11) NOT NULL,
-  `product_name` varchar(150) DEFAULT NULL,
-  `department_name` varchar(150) DEFAULT NULL,
-  `stock_quantity` int(11) DEFAULT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-LOCK TABLES `products` WRITE;
-INSERT INTO `products` VALUES 
-(1, "Mac Lipstick", "Makeup", 21),
-(2, "Moleskin Journal", "Office", 3),
-(3, "Starbucks Mug", "Home", 89),
-(4, "Urban Decay Eyeliner", "Makeup", 14),
-(5, "Stuffed Animal Dolphin", "Kids", 323),
-UNLOCK TABLES;
